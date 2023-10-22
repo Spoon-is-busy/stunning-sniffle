@@ -1,0 +1,49 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000;
+}
+
+.game {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    background-color: #111;
+    border: 2px solid #fff;
+}
+
+.ball {
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    position: absolute;
+    border-radius: 50%;
+    animation: moveBall 1s linear infinite;
+}
+
+.paddle {
+    width: 10px;
+    height: 80px;
+    background-color: #fff;
+    position: absolute;
+}
+
+#playerPaddle {
+    left: 10px;
+}
+
+#aiPaddle {
+    right: 10px;
+}
+
+@keyframes moveBall {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(560px, 380px);
+    }
+}
